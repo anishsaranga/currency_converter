@@ -29,11 +29,12 @@ function App() {
   }
 
   return (
+    <div style={{
+      backgroundImage: `url('https://images.pexels.com/photos/534216/pexels-photo-534216.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2')`
+  }}>
+    <nav className='text-center text-stone-100 font-semibold font-mono text-4xl md:text-6xl bg-transparent backdrop-blur-sm p-4'>Currency Converter</nav>
     <div
         className="w-full h-screen flex flex-wrap justify-center items-center bg-cover bg-no-repeat"
-        style={{
-            backgroundImage: `url('https://images.pexels.com/photos/534216/pexels-photo-534216.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2')`
-        }}
     >
         <div className="w-full">
             <div className="w-full max-w-md mx-auto border border-gray-60 rounded-lg p-5 backdrop-blur-sm bg-white/30">
@@ -75,13 +76,16 @@ function App() {
                             selectedCurrency={to}
                         />
                     </div>
+                    <div>
                     <button type="submit" className="w-full bg-blue-600 text-white px-4 py-3 rounded-lg">
                         Convert {from.toUpperCase()} to {to.toUpperCase()}
                     </button>
+                    </div>
                 </form>
             </div>
         </div>
     </div>
+  </div>
 );
 }
 
